@@ -73,6 +73,8 @@ const tweetData = {
   "created_at": 1461116232227
 }
 
+
+//
 $(document).ready(function() {
   // var $tweet = createTweetElement(tweetData);
   renderTweets(data);
@@ -81,6 +83,13 @@ $(document).ready(function() {
 
   // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
+
+  //Fetching TWeets with AJAX Ste
+// function loadtweets() {
+
+
+
+// }
 
 
 });
