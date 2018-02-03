@@ -9,25 +9,53 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+    <!-- Character Counting-->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
-
   <body>
 
-    <!-- Top nav bar (fixed) -->
-    <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
-      <span class="header">Tweeter</span>
-    </nav>
+  <!-- Top nav bar (fixed) -->
+  <nav id="nav-bar">
+    <img class="logo" src="/images/bird.png" width="80px" height="80px">
+    <span class="header">Tweeter</span>
+  </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <!-- <span class="header">Container Heading</span> -->
+      
+      <section class="new-tweet">
+        <form method="post" action="/tweets">
+        <textarea name="text" style="border:1px solid #244751; width: 350px" id="tweetText"  placeholder= "What are you humming about?">this is test only</textarea>
+        <input type="submit" value="Tweet">
+        <div style='text-align:right;'><span id="counter">140</span></div>
+      </form>
+      </section>
     </main>
 
+    <!-- <form id="food-form" action="save">
+      <label for="food-field">Things that taste bad with penut butter:</label>
+      <input name="food" id="food-field">
+      <input type="submit" value="Save">
+    </form> -->
+
+<!--Input tweets-->
+    <section id="tweets-container">
+        <!-- <article class= "tweet">
+            <header>NAME</header>
+            <p>tweet body</p>
+            <input name= "tweet-input" id="tweet-input">
+            <input type="submit" value="Save">
+          </article> -->
+      </section> 
   </body>
 </html>

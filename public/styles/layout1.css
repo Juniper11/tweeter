@@ -4,16 +4,10 @@
  * Do not modify these two selectors, please
  */
 html {
-  scroll-behavior: auto;
-  overflow-y: scroll;
   box-sizing: border-box;
-  /* overflow-y: scroll; */
-  /* box-sizing: 100%; */
 }
 *, *:before, *:after {
-  
-  /* box-sizing: inherit; */
-  box-sizing: 100%;
+  box-sizing: inherit;
 }
 
  body {
@@ -21,27 +15,32 @@ html {
   color: #244751;
   background-color: #eee;
   font-family: Roboto Condensed, sans-serif;
-  /* overflow-y: scroll; */
-  /* position: align-self: baseline; */
-} 
+}
 
 .container {
   background-color: white;
   margin-right: auto;
-  /* width: 800px; */
   width: 450px;
   margin-left: auto;
   padding: 2em;
+
+}
+
+#tweetscontainer {
+  background-color: #666;
+  margin-right: auto;
+  width: 450px;
+  margin-left: auto;
+  padding: 2em;
+
 }
 
 .new-tweet {
-  margin: 0;
   border: 1px solid #666;
   background-color: #eee;
   border-radius: 10px;
   padding: 10px;
   width: 400px; 
-  height: 200px;
 }
 
 .new-tweet .counter {
@@ -49,41 +48,24 @@ html {
 }
 
 article.tweet header {
-  /* background-color: blue; */
-  background-color: #eee;
-  border-radius: 10px;
-  padding: 10px;
-  width: 360px;
-  height: 80px;
-  margin-right: auto;
-  margin-left: auto;
+  background-color: #666;
+  width: 200px;
 }
 
 article.tweet {
-  margin: 0;
-  border: 1px solid #666;
-  /* background-color: blue; */
   background-color: white;
-  border-radius: 10px;
-  padding: 10px;
-  width: 400px; 
-  height: 200px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 200px;
+  
   }
 
-  #tweets-container { */
-    background-color: white;
-    margin-right: auto;
-    width: 450px;
-    margin-left: auto;
-    padding: 2em;
-  } 
-
   article.tweet:hover, article.tweet header :hover{
+    margin: 0;
     border: 1px solid #666;
     border-radius: 10px;
+
+
 }
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
