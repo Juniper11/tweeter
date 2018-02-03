@@ -13,10 +13,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
  body {
   margin: 0;
   color: #244751; 
@@ -41,7 +37,6 @@ nav#nav-bar {
   color: #e8fdff;
   Font-size: 2em;
   line-height: 80px;
-  Font-size: 2em;
   /* float: left;   */
   /* padding: 20px; */
   /* vertical-align: middle; */
@@ -52,8 +47,13 @@ nav#nav-bar {
   float: left;  
   line-height: 80px;
 
-  /* ... */
 }
+
+/* #nav-bar .composebox {
+  vertical-align: right;
+  color: #e8fdff;
+  Font-size: 2em;
+} */
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

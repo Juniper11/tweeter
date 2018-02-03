@@ -32,6 +32,7 @@ html {
   width: 450px;
   margin-left: auto;
   padding: 2em;
+  text
 }
 
 .new-tweet {
@@ -72,7 +73,7 @@ article.tweet {
   margin-left: auto;
   }
 
-  #tweets-container { */
+  #tweets-container { 
     background-color: white;
     margin-right: auto;
     width: 450px;
