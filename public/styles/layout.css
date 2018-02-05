@@ -16,16 +16,13 @@
   color: #244751;
   background-color: #eee;
   font-family: Roboto Condensed, sans-serif;
-  /* overflow-y: auto; */
-  overflow-y: 
-  overflow: scroll;
+  /* overflow-y: 
+  overflow: scroll; */
 } 
 
 .horizontal-scroll-wrapper {
   width: 100px;
   height: 300px;
-  /* overflow-y: auto;
-  overflow-x: hidden; */
 }
 
 /* keeps compose tweet box centered in middle */
@@ -51,30 +48,33 @@
   height: 200px; 
 } 
 
-/* .new-tweet .counter {
-s
-} */
-
 /*Contains logo, Tweet author and their twitter handle */
 article .tweet-header {
   margin-top: 10px;
   background-color: #eee; 
   border-radius: 10px;
   padding: 10px;
-  width: 360px;
+  width: 400px;
   height: 120px;
   margin-right: auto;
   margin-left: auto;
 }
 
 /* Published Tweet - Text area */
-article.tweet {
+article .tweet {
+
+
+
+
+
+
+
+
   margin: 0;
   border: 1px solid #666;
-  /* background-color: blue; */
   /* background-color: white; */
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
   width: 400px; 
   height: 100px;
   margin-right: auto;
@@ -83,15 +83,16 @@ article.tweet {
   } 
 
 article .tweet p {
-margin: 10px;
+margin: 15px;
 text-align: right;
 }
 
+/* This is where the tweet text goes */
 article .tweet-section {
+  background-color: green;
   /* text-align: left; */
-  margin: 10px;
+  margin: 30px;
 }
-
 
 /*Contains Date/Time */
 article .tweet footer {
@@ -107,19 +108,15 @@ article .tweet footer {
 
 article .tweet-footer p {
   /* padding: 10px; */
-  margin: 10px;
+  margin: 30px;
   font-size: 12px;
 }
 
 article .tweet-header h3 {
   display: inline-block;
-  /* margin-top: 5px; */
-  /* margin: 0; */
   margin-top: 10px;
   margin-left: 20px; 
   vertical-align: 30px;
-  /* text-align: top; */
-  /* padding-top: 18px; */
 }
 
 article .tweet-header p {
@@ -128,7 +125,6 @@ article .tweet-header p {
   float: right;
   padding: 0;
   color: grey;
-  /* padding-right: 5px; */
   text-align: right;
 }
 
@@ -151,6 +147,11 @@ article .tweet-header p {
   margin-left: auto;
   /* padding: 20px;  */
 } 
+
+#tweetText {
+  font-family: Roboto Condensed, sans-serif;
+}
+
 
 article.tweet:hover, article.tweet header :hover{
   border: 1px solid #666;

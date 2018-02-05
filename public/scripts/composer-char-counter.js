@@ -4,8 +4,8 @@ $(document).ready(function(e){
     var numberOfCharacters = el.val().length;
     var charactersLeft = 140 - numberOfCharacters;
 
-    console.log("Number of Characters", el.val().length);
-    console.log("charactersLeft", charactersLeft);  
+    // console.log("Number of Characters", el.val().length);
+    // console.log("charactersLeft", charactersLeft);  
 
     $('#counter').text(charactersLeft);
     TweetExceed(charactersLeft, el);
@@ -20,7 +20,7 @@ function TweetExceed (charactersLeft, el) {
     if (charactersLeft < 0) {
       el.css('text-decoration', 'underline wavy red')
       // document.getElementById("tweetText").style.textUnderlinePosition = "red";
-      console.log("hello");
+      // console.log("hello");
     } else {
       el.css('text-decoration', 'none')
     }

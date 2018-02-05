@@ -10,6 +10,9 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/article-tweets.css" type="text/css" />
+
     
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -27,27 +30,37 @@
   <nav id="nav-bar">
     <img class="logo" src="/images/bird.png" width="80px" height="80px">
     <span class="header">Tweeter</span>
-    <span class="composebox">Compose</span>
+    <button type="submit" class="composebox"  value="Compose"><span id="composebox"><i class="icon" aria-hidden="true"></i>Compose</button>
+    
+        <!--Form toggle Step - Compose Box-->
+    <!-- <span id="composebox">
+      <form method="post" action="/compose">
+      <!-- <span id="composebox">Composeklklk</span> -->
+    <!-- <textarea id="tweetText" name="text" style="border:1px solid #244751; width: 350px" id="tweetText"  placeholder= "What are you humming about?">this is test only</textarea> -->
+    <!-- <input type="submit" value="Compose" id="composebox">
+  </span> --> 
   </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+
       <!-- <span class="header">Container Heading</span> -->
       <section class="new-tweet">
         <form method="post" action="/tweets">
           <h2>Compose Tweet</h2>
-        <textarea name="text" style="border:1px solid #244751; width: 350px" id="tweetText"  placeholder= "What are you humming about?">this is test only</textarea>
-        <!--<textarea id="tweetText" name="text" style="border:1px solid #244751; width: 350px" id="tweetText"  placeholder= "What are you humming about?">this is test only</textarea> -->
-        <input type="submit" value="Tweet" id="tweet">
-        <div style='text-align:right;'><span id="counter">140</span></div>
-      </form>
+        <!-- <textarea name="text" style="border:1px solid #244751; width: 350px" id="tweetText"  placeholder= "What are you humming about?">this is test only</textarea> -->
+          <textarea id="tweetText" name="text" style="border:1px solid #244751; width: 350px" id="tweetText"  placeholder= "What are you humming about?">this is test only</textarea>
+          <input type="submit" value="Tweet" id="tweet">
+          <div style='text-align:right;'><span id="counter">140</span></div>
+        </form>
       </section>
     </main>
 
-<section class="article.tweet">
-
 <!--Input tweets-->
 <section id="tweets-container">
+
+    <!-- below is the main tweet styled correctly -->
     <article class="new-article" >
 
       <!-- <header id="article.tweet header"> -->
@@ -57,13 +70,11 @@
         <p>@MrFields</p>
       </header>
 
-      <section class="tweet-section"><p>Little tweet here.</p></section>
+      <section class="tweet-section">
+        <!-- p is where we want the tweets to go -->
+        <p>Little tweet here.</p></section>
       <footer class="tweet-footer">
         <p>10 days ago</p>
-        <!-- <div class="likecounter">0</div> -->
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-retweet" aria-hidden="true"></i>
-        <i class="fa fa-flag" aria-hidden="true"></i>
       </footer>
     </article>
   </section>

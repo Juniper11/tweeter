@@ -3,39 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// *ction() {
-// // ****************$(f*****************************************************************/
-// un  $(".new-tweet form ").on('submit', function(event){
-// //     event.preventDefault();
-//     const data = $(this).serialize();
-//     $.post("/tweets", data)
 
-//   });
-// })
-
-
-
-// Test / driver code (temporary). Eventually will get this from the server.
-// const tweetData = {
-//   "user": {
-//     "name": "Newton",
-//     "avatars": {
-//       "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
-//       "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-//       "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
-//     },
-//     "handle": "@SirIsaac"
-//   },
-//   "content": {
-//     "text": "If I have seen further it is by standing on the shoulders of giants"
-//   },
-//   "created_at": 1461116232227
-// }
-
-
-//
 $(document).ready(function() {
-  
   function checkTweetContent(){
     if(($('#tweetText').val()==null) || ($('#tweetText').val()=="")){
       alert("The tweet text box is emty");
@@ -47,13 +16,19 @@ $(document).ready(function() {
     }
   }
 
+//for Toggling ComposeBox on 'click'
+$('.composebox').on('click', function() {
+  $('.new-tweet').slideToggle(function() {
+    $(this).find('textarea').select();
+  });
+});
+
   //Fetching Tweets with AJAX Step
   function loadTweets() {
     $.ajax({
       method: 'GET',
       url: '/tweets',
       success: function(result){
-        
         
         renderTweets(result);
       
@@ -77,11 +52,11 @@ $(document).ready(function() {
         text: $('textarea').val(),
         success: function(result){
           loadTweets();
-          // renderTweets(result);
+          renderTweets(result);
           //create a function to render tweets
         },
         error: function(error){
-          console.log("there was an error in making ajax cal composel");
+          console.log("there was an error in making ajax cal compose");
           console.log(error);
         }
       });
@@ -109,15 +84,21 @@ $(document).ready(function() {
   function createTweetElement (tweet)  {
     console.log("tweet", tweet);
     console.log("inside createtweetelement", tweet.user.name)
+    console.log(tweet.content.text, "tweet.content.text");
   
     var tweetContainer = $("section#tweets-container");
     
     // var $tweet = $("section#tweet-container").addClass("tweet");
     // var $header = $("<header>").text(tweet.user.name);
     // $tweet.append($header)
-    var tweetContent = $("<article>").text(tweet.content.text).addClass("tweet");
+    var tweetContent = $("<article>").text(tweet.content.text).addClass("tweet-section");
+    // var tweetContent = $("<article>").text(tweet.content.text).addClass("tweet");
     // console.log("tweetContent", tweetContent);
-    $("section#tweets-container").append(tweetContent)
+
+    // $("section#tweets-container").append(tweetContent);
+    $("section#tweets-container").addClass("tweet-section").append(tweetContent);
+   
+    console.log(tweet.content, "tweet.content");
   
     // return $tweet;
   }
@@ -127,10 +108,6 @@ $(document).ready(function() {
   ComposeTweet();
 
 
-
-  
-
-
-  
+  //Document Ready Closing Brackets
 });
 

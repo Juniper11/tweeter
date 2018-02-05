@@ -46,14 +46,29 @@ nav#nav-bar {
 #nav-bar .logo {
   float: left;  
   line-height: 80px;
-
 }
 
-/* #nav-bar .composebox {
-  vertical-align: right;
-  color: #e8fdff;
-  Font-size: 2em;
-} */
+#nav-bar .composebox {
+  color: #244751;
+  display: inline-block;
+  background-color: white;
+  float: right;
+  margin-top: 15px;
+  vertical-align: middle;
+  width: 120px;
+  height: 60px;
+  Font-size: 1.5em;
+  color: #00a087;
+  border: 1px solid #666;
+  margin: 10;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+#nav-bar .composebox:hover {
+  border: 3px solid #666;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
