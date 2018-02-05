@@ -32,39 +32,41 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
       <!-- <span class="header">Container Heading</span> -->
-      
       <section class="new-tweet">
         <form method="post" action="/tweets">
           <h2>Compose Tweet</h2>
-        <textarea id="tweetText" name="text" style="border:1px solid #244751; width: 350px" id="tweetText"  placeholder= "What are you humming about?">this is test only</textarea>
-        <input type="submit" value="Tweet">
+        <textarea name="text" style="border:1px solid #244751; width: 350px" id="tweetText"  placeholder= "What are you humming about?">this is test only</textarea>
+        <!--<textarea id="tweetText" name="text" style="border:1px solid #244751; width: 350px" id="tweetText"  placeholder= "What are you humming about?">this is test only</textarea> -->
+        <input type="submit" value="Tweet" id="tweet">
         <div style='text-align:right;'><span id="counter">140</span></div>
       </form>
       </section>
     </main>
 
-    <!-- <section class="new-tweet">
-        <form method="post" action="/tweets">
-        <textarea name="text" style="border:1px solid #244751; width: 350px" id="tweetText"  placeholder= "What are you humming about?">this is test only</textarea>
-        <input type="submit" value="Tweet">
-        <div style='text-align:right;'><span id="counter">140</span></div>
-      </form>
-      </section>
-    </main> -->
-
-
-
+<section class="article.tweet">
 
 <!--Input tweets-->
-    <section id="tweets-container">
-        <article class= "tweet">
-            <header>NAME</header>
-            <p>tweet body</p>
-            <!-- <input name= "tweet-input" id="tweet-input">
-            <input type="submit" value="Save"> -->
-          </article>
-      </section> 
+<section id="tweets-container">
+    <article class="new-article" >
+
+      <!-- <header id="article.tweet header"> -->
+      <header class="tweet-header">
+        <img class="avatars" src="https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png"/>
+        <h3>Bill Fields</h3>
+        <p>@MrFields</p>
+      </header>
+
+      <section class="tweet-section"><p>Little tweet here.</p></section>
+      <footer class="tweet-footer">
+        <p>10 days ago</p>
+        <!-- <div class="likecounter">0</div> -->
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-retweet" aria-hidden="true"></i>
+        <i class="fa fa-flag" aria-hidden="true"></i>
+      </footer>
+    </article>
+  </section>
+
   </body>
 </html>

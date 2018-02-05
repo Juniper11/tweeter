@@ -3,87 +3,158 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
-  scroll-behavior: auto;
-  overflow-y: scroll;
+ html {
   box-sizing: border-box;
-  /* overflow-y: scroll; */
-  /* box-sizing: 100%; */
-}
+}  
+
 *, *:before, *:after {
-  
-  /* box-sizing: inherit; */
-  box-sizing: 100%;
-}
+  box-sizing: inherit;
+} */
 
  body {
-  margin: 0;
+  /* margin: 0; */
   color: #244751;
   background-color: #eee;
   font-family: Roboto Condensed, sans-serif;
-  /* overflow-y: scroll; */
-  /* position: align-self: baseline; */
+  /* overflow-y: auto; */
+  overflow-y: 
+  overflow: scroll;
 } 
 
+.horizontal-scroll-wrapper {
+  width: 100px;
+  height: 300px;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
+}
+
+/* keeps compose tweet box centered in middle */
 .container {
-  background-color: white;
-  margin-right: auto;
-  /* width: 800px; */
+  /* background-color: blue;  */
+  background-color: white; 
+  margin-right: auto; 
+  /* width: 800px;  */
   width: 450px;
   margin-left: auto;
   padding: 2em;
-  text
-}
+  text 
+ }  
 
+/* Main box containing Compose Tweets */
 .new-tweet {
   margin: 0;
   border: 1px solid #666;
-  background-color: #eee;
+  background-color: #eee; 
   border-radius: 10px;
   padding: 10px;
   width: 400px; 
-  height: 200px;
-}
+  height: 200px; 
+} 
 
-.new-tweet .counter {
+/* .new-tweet .counter {
+s
+} */
 
-}
-
-article.tweet header {
-  /* background-color: blue; */
-  background-color: #eee;
+/*Contains logo, Tweet author and their twitter handle */
+article .tweet-header {
+  margin-top: 10px;
+  background-color: #eee; 
   border-radius: 10px;
   padding: 10px;
   width: 360px;
-  height: 80px;
+  height: 120px;
   margin-right: auto;
   margin-left: auto;
 }
 
+/* Published Tweet - Text area */
 article.tweet {
   margin: 0;
   border: 1px solid #666;
   /* background-color: blue; */
-  background-color: white;
+  /* background-color: white; */
   border-radius: 10px;
   padding: 10px;
   width: 400px; 
-  height: 200px;
+  height: 100px;
   margin-right: auto;
   margin-left: auto;
-  }
-
-  #tweets-container { 
-    background-color: white;
-    margin-right: auto;
-    width: 450px;
-    margin-left: auto;
-    padding: 2em;
+  background-color: blue;
   } 
 
-  article.tweet:hover, article.tweet header :hover{
-    border: 1px solid #666;
-    border-radius: 10px;
+article .tweet p {
+margin: 10px;
+text-align: right;
+}
+
+article .tweet-section {
+  /* text-align: left; */
+  margin: 10px;
+}
+
+
+/*Contains Date/Time */
+article .tweet footer {
+  background-color: white;
+  border: 1px solid #666;
+  border-radius: 10px;
+  padding: 10px;
+  width: 360px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+article .tweet-footer p {
+  /* padding: 10px; */
+  margin: 10px;
+  font-size: 12px;
+}
+
+article .tweet-header h3 {
+  display: inline-block;
+  /* margin-top: 5px; */
+  /* margin: 0; */
+  margin-top: 10px;
+  margin-left: 20px; 
+  vertical-align: 30px;
+  /* text-align: top; */
+  /* padding-top: 18px; */
+}
+
+article .tweet-header p {
+  margin-top: 10px;
+  display: inline-block;
+  float: right;
+  padding: 0;
+  color: grey;
+  /* padding-right: 5px; */
+  text-align: right;
+}
+
+/*Logo associated with individual users*/
+.avatar {
+  vertical-align: middle;
+  border-left: 50px;
+  padding-left: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/*Keeps published tweets */
+#tweets-container { 
+  border: 1px solid #666;
+  background-color: white;
+  margin-right: auto;
+  width: 450px;
+  margin-left: auto;
+  /* padding: 20px;  */
+} 
+
+article.tweet:hover, article.tweet header :hover{
+  border: 1px solid #666;
+  border-radius: 10px;
 }
 
 /*
