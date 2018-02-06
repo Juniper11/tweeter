@@ -72,6 +72,17 @@ article .tweet {
   margin-left: auto;
   } 
 
+article .tweetBorder {
+  margin: 0;
+  border: 1px solid #666;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px; 
+  height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 article .tweet p {
 margin: 15px;
 text-align: right;
