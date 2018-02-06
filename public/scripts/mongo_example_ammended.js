@@ -15,11 +15,11 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   // ==> Let's "get all the tweets". In Mongo-speak, we "find" them.
 
 
-  function GetTweets(callback) {
+  function getTweets(callback) {
     db.collection("tweets").find().toArray(callback);
   }
 
-    GetTweets((err, tweets) => {
+    getTweets((err, tweets) => {
       if (err) throw err;
     
 

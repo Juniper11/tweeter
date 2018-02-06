@@ -12,12 +12,9 @@
 } */
 
  body {
-  /* margin: 0; */
   color: #244751;
   background-color: #eee;
   font-family: Roboto Condensed, sans-serif;
-  /* overflow-y: 
-  overflow: scroll; */
 } 
 
 .horizontal-scroll-wrapper {
@@ -27,19 +24,16 @@
 
 /* keeps compose tweet box centered in middle */
 .container {
-  /* background-color: blue;  */
   background-color: white; 
   margin-right: auto; 
-  /* width: 800px;  */
   width: 450px;
   margin-left: auto;
   padding: 2em;
-  /* text  */
  }  
 
 /* Main box containing Compose Tweets */
 .new-tweet {
-  margin: 0;
+  margin-right: 20px;
   border: 1px solid #666;
   background-color: #eee; 
   border-radius: 10px;
@@ -47,6 +41,12 @@
   width: 400px; 
   height: 200px; 
 } 
+
+#counter {
+  margin: 30px;
+  margin-bottom: 80px;
+  text-align: right;
+}
 
 /*Contains logo, Tweet author and their twitter handle */
 article .tweet-header {
@@ -64,14 +64,12 @@ article .tweet-header {
 article .tweet {
   margin: 0;
   border: 1px solid #666;
-  /* background-color: white; */
   border-radius: 10px;
   padding: 20px;
   width: 400px; 
   height: 100px;
   margin-right: auto;
   margin-left: auto;
-  background-color: blue;
   } 
 
 article .tweet p {
@@ -81,15 +79,13 @@ text-align: right;
 
 /* This is where the tweet text goes */
 article .tweet-section {
-  /* background-color: green; */
-  /* text-align: left; */
   margin: 30px;
 }
 
 /*Contains Date/Time */
 article .tweet footer {
-  background-color: white;
   border: 1px solid #666;
+  background-color: white;
   border-radius: 10px;
   padding: 10px;
   width: 360px;
@@ -99,7 +95,6 @@ article .tweet footer {
 }
 
 article .tweet-footer p {
-  /* padding: 10px; */
   margin: 30px;
   font-size: 12px;
 }
@@ -137,7 +132,6 @@ article .tweet-header p {
   margin-right: auto;
   width: 450px;
   margin-left: auto;
-  /* padding: 20px;  */
 } 
 
 #tweetText {
@@ -146,9 +140,14 @@ article .tweet-header p {
 
 article.tweet:hover, article.tweet header :hover{
   border: 3px solid #666;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
+h2 {
+  border-bottom: 1px solid ;
+  margin-right: 25px;
+}
+  
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

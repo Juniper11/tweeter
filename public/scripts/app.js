@@ -4,13 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
- //checkTweetContent ends here.
-
    $('#tweetcompose').on('click', function() {
       $('.new-tweet').slideToggle('normal');
       $('#tweetText').focus();
   });
-
 
   //Fetching Tweets with AJAX Step
   function loadTweets() {
@@ -41,15 +38,13 @@ $(document).ready(function() {
         } else if ($('#tweetText').val().length >= 140) {
           alert("More than 140 characters not allowed");
         } else {
-          //Calls loadTweet function if error conditions are not met
-      
     
         var tweetData = $('#tweetText').val();
         console.log(tweetData);
         var data = {
           tweetText: $('#tweetText').val()
         };
-      //event.preventDefault();
+
       $.ajax({ 
         method: 'POST',
         url: '/tweets',
@@ -74,19 +69,12 @@ $(document).ready(function() {
     $('#tweets-container').empty();
     // loops through tweets
     for(var i = 0; i < tweets.length; i++){
-      //var $tweetElement = createTweetElement(tweets[i]); 
       $('#tweets-container').prepend(createTweetElement(tweets[i]));
     }
-
   }
 
   function createTweetElement (tweet)  {
 
-    // var tweetContainer = $("section#tweets-container");
-    
-    // var tweetContent = $("<article>").text(tweet.content.text).addClass("tweet-section");
- 
-    //Creating new tag
     var $article = $('<article class="new-article">');
     var $section = $('<section class="tweet-section">')
       .append('<p>' + tweet.content.text + '</p>')
@@ -96,8 +84,7 @@ $(document).ready(function() {
       .append('<p>' + tweet.user.handle + '</p>')
       var $footer = $('<footer class="tweet-footer">')
       .append('<p>' + moment(tweet.created_at).fromNow()  + '</p>')
-
-       //moment().startOf('hour').fromNow();
+      .append()
 
      $article.append($header);
      $article.append($section);
@@ -112,4 +99,3 @@ $(document).ready(function() {
 
 //Document Ready Closing Brackets
 });    
-
