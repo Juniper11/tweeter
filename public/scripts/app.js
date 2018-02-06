@@ -13,15 +13,17 @@ $(document).ready(function() {
       //Calls loadTweet function if error conditions are not met
     loadTweets(); 
     }
-  }
+  } //checkTweetContent ends here.
 
   //for Toggling ComposeBox on 'click'
   // $('.composebox').on('submit', function() {
-   $('.composebox').on('click', function() {
-    $('.new-tweet').slideToggle(function() {
-      $(this).find('tweetText').select();
-    });
+   $('#tweetcompose').on('click', function() {
+      alert("hello");
+      $('.new-tweet').slideToggle('normal');
+      $('#tweetText').focus();
+      // $(this).find('tweetText').select();
   });
+
 
   //Fetching Tweets with AJAX Step
   function loadTweets() {
@@ -106,7 +108,7 @@ $(document).ready(function() {
     $section.append($sectionP);
 
     var $footerP = $("<p>");
-    $footerP.text(moment(data.created_at).format('llll');
+    $footerP.text(moment(data.created_at).format('llll'));
     var $footer = $("<footer>").addClass("tweeter-footer");
     $footer.append($footerP);
 
