@@ -25,10 +25,13 @@ nav#nav-bar {
   padding: 2em;
   padding-top: 0;
   padding-bottom: 0;
-  margin-left: 80px;
-  margin-right: 80px; 
   /* float: left;  */
   /* line-height: 10;  */
+}
+
+#nav-bar .container {
+background: transparent;
+
 }
 
 #nav-bar .header {
