@@ -15,3 +15,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshot
+
+!["Screenshot of Main page"](https://github.com/Juniper11/tweeter/blob/feature/mongodb/Tweeter_Main_Page.png)
