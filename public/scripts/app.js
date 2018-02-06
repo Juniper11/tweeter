@@ -3,7 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
 $(document).ready(function() {
   function checkTweetContent(){
     if(($('#tweetText').val()==null) || ($('#tweetText').val()=="")){
@@ -16,12 +15,13 @@ $(document).ready(function() {
     }
   }
 
-//for Toggling ComposeBox on 'click'
-$('.composebox').on('click', function() {
-  $('.new-tweet').slideToggle(function() {
-    $(this).find('textarea').select();
+  //for Toggling ComposeBox on 'click'
+  // $('.composebox').on('submit', function() {
+   $('.composebox').on('click', function() {
+    $('.new-tweet').slideToggle(function() {
+      $(this).find('tweetText').select();
+    });
   });
-});
 
   //Fetching Tweets with AJAX Step
   function loadTweets() {
@@ -43,17 +43,24 @@ $('.composebox').on('click', function() {
 
     function ComposeTweet() {
       $('form').on('submit', (event) => {
-        console.log("form click");
+        console.log("form click");  
 
+        var tweetData = $('#tweetText').val();
+        console.log(tweetData);
+        var data = {
+          tweetText: $('#tweetText').val()
+        };
       event.preventDefault();
       $.ajax({
         method: 'POST',
         url: '/tweets',
-        text: $('textarea').val(),
+        data: $('#tweetform').serialize(),
         success: function(result){
+          console.log("success");
           loadTweets();
+          
           renderTweets(result);
-          //create a function to render tweets
+                  
         },
         error: function(error){
           console.log("there was an error in making ajax cal compose");
@@ -82,6 +89,27 @@ $('.composebox').on('click', function() {
   }
 
   function createTweetElement (tweet)  {
+    var $img =$("<img>").addClass("avatars");
+    $img.attr('src, data.user.avatars.small');
+    var $h3 =$("<h3>");
+    $h3.text(data.user.avatars.small);
+    var $headerP =$("<p>");
+    $headerP.text(data.user.handle);
+    var $header = $("<header>").addClass("tweeter-header");
+    $header.append($img);
+    $header.append($h3);
+    $header.append($headerP);
+
+    var $sectionP = $("<p>");
+    $sectionP.text(data.content.text);
+    var $section = $("<section>").addClass("tweet-section")
+    $section.append($sectionP);
+
+    var $footerP = $("<p>");
+    $footerP.text(moment(data.created_at).format('llll');
+    var $footer = $("<footer>").addClass("tweeter-footer");
+    $footer.append($footerP);
+
     console.log("tweet", tweet);
     console.log("inside createtweetelement", tweet.user.name)
     console.log(tweet.content.text, "tweet.content.text");
@@ -99,8 +127,15 @@ $('.composebox').on('click', function() {
     $("section#tweets-container").addClass("tweet-section").append(tweetContent);
    
     console.log(tweet.content, "tweet.content");
-  
     // return $tweet;
+
+    var $article = $("<article>").addClass("new-article")
+    $article.append($header);
+    $article.append($section);
+    $article.append($footer);
+    $article.data('id', data._id);
+
+    // return $article;
   }
 
   // $('.new-tweet').hide();

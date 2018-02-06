@@ -22,3 +22,21 @@ article .tweet-header {
   margin-right: auto;
   margin-left: auto;
 }
+
+/* Published Tweet - Text area */
+article.tweet {
+  
+  
+  
+  
+    margin: 0;
+    border: 1px solid #666;
+    /* background-color: white; */
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px; 
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: blue;
+    } 

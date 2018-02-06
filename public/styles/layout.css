@@ -34,7 +34,7 @@
   width: 450px;
   margin-left: auto;
   padding: 2em;
-  text 
+  /* text  */
  }  
 
 /* Main box containing Compose Tweets */
@@ -62,14 +62,6 @@ article .tweet-header {
 
 /* Published Tweet - Text area */
 article .tweet {
-
-
-
-
-
-
-
-
   margin: 0;
   border: 1px solid #666;
   /* background-color: white; */
@@ -89,7 +81,7 @@ text-align: right;
 
 /* This is where the tweet text goes */
 article .tweet-section {
-  background-color: green;
+  /* background-color: green; */
   /* text-align: left; */
   margin: 30px;
 }
@@ -152,10 +144,9 @@ article .tweet-header p {
   font-family: Roboto Condensed, sans-serif;
 }
 
-
 article.tweet:hover, article.tweet header :hover{
-  border: 1px solid #666;
-  border-radius: 10px;
+  border: 3px solid #666;
+  border-radius: 15px;
 }
 
 /*
